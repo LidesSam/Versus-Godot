@@ -1,0 +1,224 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/System/Lobby.gd" type="Script" id=1]
+
+[node name="Lobby" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainLayer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -317.5
+margin_top = -179.0
+margin_right = 317.5
+margin_bottom = 179.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MainLayer"]
+margin_right = 635.0
+margin_bottom = 14.0
+text = "Mode:"
+
+[node name="CreateBtn" type="Button" parent="MainLayer"]
+margin_top = 18.0
+margin_right = 635.0
+margin_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "create server"
+
+[node name="JoinBtn" type="Button" parent="MainLayer"]
+margin_top = 190.0
+margin_right = 635.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Join Room"
+
+[node name="CreateLayer" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -317.5
+margin_top = -179.0
+margin_right = 317.5
+margin_bottom = 179.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CreateLayer"]
+margin_right = 635.0
+margin_bottom = 14.0
+text = "Create"
+align = 1
+
+[node name="CreateBtn" type="Button" parent="CreateLayer"]
+margin_top = 18.0
+margin_right = 635.0
+margin_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="JoinBtn" type="Button" parent="CreateLayer"]
+margin_top = 190.0
+margin_right = 635.0
+margin_bottom = 358.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BackBtn" type="Button" parent="CreateLayer"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "back"
+
+[node name="JoinLayer" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -317.5
+margin_top = -179.0
+margin_right = 317.5
+margin_bottom = 179.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="JoinLayer"]
+margin_right = 635.0
+margin_bottom = 14.0
+text = "Mode:"
+
+[node name="BackBtn" type="Button" parent="JoinLayer"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "back"
+
+[node name="Old" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -200.0
+margin_right = 400.0
+margin_bottom = 200.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Old"]
+margin_right = 800.0
+margin_bottom = 97.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Old/HBoxContainer"]
+margin_right = 800.0
+margin_bottom = 97.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Lobby"
+align = 1
+valign = 1
+
+[node name="NameRow" type="HBoxContainer" parent="Old"]
+margin_top = 101.0
+margin_right = 800.0
+margin_bottom = 198.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="Old/NameRow"]
+margin_right = 265.0
+margin_bottom = 97.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+text = "name"
+align = 1
+valign = 1
+
+[node name="PlayeyNameEtxt" type="TextEdit" parent="Old/NameRow"]
+margin_left = 269.0
+margin_right = 800.0
+margin_bottom = 97.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Old"]
+margin_top = 202.0
+margin_right = 800.0
+margin_bottom = 299.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CreateBtn" type="Button" parent="Old/HBoxContainer3"]
+margin_right = 398.0
+margin_bottom = 97.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Create"
+
+[node name="JoinBtn" type="Button" parent="Old/HBoxContainer3"]
+margin_left = 402.0
+margin_right = 800.0
+margin_bottom = 97.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Join"
+
+[node name="backBtn" type="Button" parent="Old"]
+margin_top = 303.0
+margin_right = 800.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "back"
+
+[node name="CloseBtn" type="Button" parent="."]
+margin_left = 837.99
+margin_top = 522.384
+margin_right = 1012.99
+margin_bottom = 572.384
+text = "close"
+
+[node name="IPLineEdit" type="LineEdit" parent="."]
+margin_left = 321.0
+margin_top = 65.0
+margin_right = 600.0
+margin_bottom = 89.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="IPAddresLBL" type="Label" parent="CanvasLayer"]
+margin_right = 161.0
+margin_bottom = 66.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="MainLayer/CreateBtn" to="." method="_on_CreateBtn_pressed"]
+[connection signal="pressed" from="MainLayer/JoinBtn" to="." method="_on_JoinBtn_pressed"]
+[connection signal="pressed" from="CreateLayer/BackBtn" to="." method="_on_BackBtn_pressed"]
+[connection signal="pressed" from="JoinLayer/BackBtn" to="." method="_on_BackBtn_pressed"]
+[connection signal="pressed" from="Old/HBoxContainer3/CreateBtn" to="." method="_on_CreateBtn_pressed"]
+[connection signal="pressed" from="Old/HBoxContainer3/JoinBtn" to="." method="_on_JoinBtn_pressed"]
+[connection signal="pressed" from="Old/backBtn" to="." method="_on_backBtn_pressed"]
+[connection signal="pressed" from="Old/backBtn" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="CloseBtn" to="." method="_on_CloseBtn_pressed"]

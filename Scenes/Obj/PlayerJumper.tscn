@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Src/Sprites/TetraPrint.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Obj/PlayerJumper.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 7.72467, 30.1957 )
+
+[node name="PlayerJumper" type="RigidBody2D"]
+mode = 2
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2.89872, -1.05408 )
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 3
+
+[node name="Playername" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -34.5
+margin_top = -58.0076
+margin_right = 34.5
+margin_bottom = -44.0076
+text = "no asinged"
+__meta__ = {
+"_edit_use_anchors_": false
+}

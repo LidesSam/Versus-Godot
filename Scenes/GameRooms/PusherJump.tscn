@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/GameRooms/PusherJump.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Src/Sprites/TetraPrint.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 518.231, 33.0297 )
+
+[node name="PusherJump" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.05264
+margin_bottom = -1.05261
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 400.71, 343.852 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 108.593, 9.55536 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 108.593, 9.55536 )
+scale = Vector2( 15.929, 1.0311 )
+texture = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Control"]
+position = Vector2( 821.732, 420.887 )
+scale = Vector2( 2.38312, 2.30483 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 3 )
+action = "jump_action"
+
+[node name="Position" type="Node2D" parent="."]
+
+[node name="PJ1" type="Node2D" parent="Position"]
+position = Vector2( 193.816, 292.632 )
+
+[node name="PJ2" type="Node2D" parent="Position"]
+position = Vector2( 343.159, 292.632 )
+
+[node name="PJ3" type="Node2D" parent="Position"]
+position = Vector2( 509.303, 292.632 )

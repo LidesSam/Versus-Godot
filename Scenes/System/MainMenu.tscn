@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/System/MainMenu.gd" type="Script" id=1]
+
+[node name="MainMenu" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 298.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Multiplayer prototype"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_top = 302.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SingleplayerBtn" type="Button" parent="HBoxContainer"]
+margin_right = 510.0
+margin_bottom = 298.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Single"
+
+[node name="MultiplayerBtn" type="Button" parent="HBoxContainer"]
+margin_left = 514.0
+margin_right = 1024.0
+margin_bottom = 298.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Multi"
+[connection signal="pressed" from="HBoxContainer/SingleplayerBtn" to="." method="_on_SingleplayerBtn_pressed"]
+[connection signal="pressed" from="HBoxContainer/MultiplayerBtn" to="." method="_on_MultiplayerBtn_pressed"]
